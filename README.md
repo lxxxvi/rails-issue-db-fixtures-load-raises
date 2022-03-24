@@ -2,6 +2,8 @@
 
 This repository contains the minimal setup to reproduce an error that appears in Rails when invoking `db:fixtures:load`.
 
+* https://github.com/rails/rails/pull/44760
+
 ## Reproduce error locally
 
 1. Clone this repo
