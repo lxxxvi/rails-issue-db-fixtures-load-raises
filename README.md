@@ -2,7 +2,13 @@
 
 This repository contains the minimal setup to reproduce an error that appears in Rails when invoking `db:fixtures:load`.
 
-### Error
+## Reproduce error locally
+
+1. Clone this repo
+2. Run `bin/setup` (this also creates `other` schema and the two tables)
+3. Run `bin/rails db:fixtures:load`
+
+## Error
 
 The error appears in an edgecase with Postgres, when there are objects in another schema (other than `public`) having foreign key constraints.
 
@@ -53,9 +59,3 @@ Environment               development
 Database adapter          postgresql
 Database schema version   20220324064857
 ```
-
-## Reproduce error locally
-
-1. Clone this repo
-2. Run `bin/setup` (this also creates `other` schema and the two tables)
-3. Run `bin/rails db:fixtures:load`
